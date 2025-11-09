@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn HTML & CSS - Build Your Portfolio!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        color: #667eea;
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 40px;
+        font-size: 1.2em;
+      }
+
+      .lesson {
+        background: #f8f9fa;
+        border-left: 5px solid #667eea;
+        padding: 25px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+      }
+
+      .lesson h2 {
+        color: #764ba2;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .lesson-number {
+        background: #667eea;
+        color: white;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      .code-box {
+        background: #2d3748;
+        color: #68d391;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 15px 0;
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+      }
+
+      .result-box {
+        background: #fff5e6;
+        border: 3px dashed #ff9800;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 15px 0;
+      }
+
+      .result-label {
+        background: #ff9800;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .tip {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+
+      .tip::before {
+        content: "💡 ";
+        font-size: 1.3em;
+      }
+
+      .challenge {
+        background: #fff3e0;
+        border: 2px solid #ff9800;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .challenge h3 {
+        color: #ff9800;
+        margin-bottom: 10px;
+      }
+
+      .emoji {
+        font-size: 1.5em;
+      }
+
+      .progress-bar {
+        background: #e0e0e0;
+        height: 30px;
+        border-radius: 15px;
+        overflow: hidden;
+        margin: 30px 0;
+      }
+
+      .progress {
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        height: 100%;
+        width: 0%;
+        transition: width 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+      }
+
+      button {
+        background: #667eea;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: transform 0.2s;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+        background: #764ba2;
+      }
+
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎨 Build Your Portfolio Website!</h1>
+      <p class="subtitle">Learn HTML & CSS while creating something awesome</p>
+
+      <div class="progress-bar">
+        <div class="progress" id="progress">0% Complete</div>
+      </div>
+
+      <!-- LESSON 1 -->
+      <div class="lesson">
+        <h2>
+          <span class="lesson-number">1</span> HTML Basics - The Skeleton 💀
+        </h2>
+        <p>
+          <strong>Think of HTML as the bones of your website!</strong> It
+          creates the structure.
+        </p>
+
+        <p style="margin: 15px 0">
+          Every HTML page starts with this basic structure:
+        </p>
+
+        <div class="code-box">
+          &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;My
+          Portfolio&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;!-- Your
+          content goes here --&gt; &lt;/body&gt; &lt;/html&gt;
+        </div>
+
+        <div class="tip">
+          <strong>What's happening here?</strong><br />
+          - <code>&lt;html&gt;</code> = The wrapper for everything<br />
+          - <code>&lt;head&gt;</code> = Info about your page (like the title in
+          browser tab)<br />
+          - <code>&lt;body&gt;</code> = What people actually see on the page
+        </div>
+      </div>
+
+      <!-- LESSON 2 -->
+      <div class="lesson">
+        <h2>
+          <span class="lesson-number">2</span> Creating the Left Sidebar 👤
+        </h2>
+        <p>
+          <strong>Let's add your profile section!</strong> We'll use a
+          <code>&lt;div&gt;</code> (think of it as a container box).
+        </p>
+
+        <div class="code-box">
+          &lt;div class="sidebar"&gt; &lt;img src="your-photo.jpg" alt="Phil
+          Choi"&gt; &lt;h1&gt;Phil Choi&lt;/h1&gt; &lt;h2&gt;Software
+          Developer&lt;/h2&gt; &lt;p&gt;My name is Phil Choi and am a passionate
+          software developer. I like to learn new things and build cool
+          stuff.&lt;/p&gt; &lt;h3&gt;Contact me:&lt;/h3&gt; &lt;p&gt;Email:
+          letphil.contact@gmail.com&lt;/p&gt; &lt;p&gt;LinkedIn:
+          linkedin.com/in/yourname&lt;/p&gt; &lt;/div&gt;
+        </div>
+
+        <div class="tip">
+          <strong>HTML Tags You Just Learned:</strong><br />
+          - <code>&lt;h1&gt;</code> = Big heading (your name)<br />
+          - <code>&lt;h2&gt;</code> = Medium heading (your title)<br />
+          - <code>&lt;p&gt;</code> = Paragraph (regular text)<br />
+          - <code>&lt;img&gt;</code> = Image (your photo!)
+        </div>
+      </div>
+
+      <!-- LESSON 3 -->
+      <div class="lesson">
+        <h2><span class="lesson-number">3</span> Creating Lists 📝</h2>
+        <p>
+          <strong
+            >Lists are perfect for projects, skills, and experience!</strong
+          >
+        </p>
+
+        <div class="code-box">
+          &lt;div class="main-content"&gt; &lt;h2&gt;Projects&lt;/h2&gt;
+          &lt;ul&gt; &lt;li&gt;Project 1&lt;/li&gt; &lt;li&gt;Project
+          2&lt;/li&gt; &lt;li&gt;Project 3&lt;/li&gt; &lt;/ul&gt;
+          &lt;h2&gt;Skills&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Skill 1&lt;/li&gt;
+          &lt;li&gt;Skill 2&lt;/li&gt; &lt;li&gt;Skill 3&lt;/li&gt; &lt;/ul&gt;
+          &lt;/div&gt;
+        </div>
+
+        <div class="tip">
+          <code>&lt;ul&gt;</code> = Unordered List (bullets)<br />
+          <code>&lt;li&gt;</code> = List Item (each bullet point)
+        </div>
+      </div>
+
+      <!-- LESSON 4 -->
+      <div class="lesson">
+        <h2><span class="lesson-number">4</span> CSS - Making It Pretty! 🎨</h2>
+        <p>
+          <strong
+            >CSS is like the clothing and makeup for your HTML skeleton!</strong
+          >
+        </p>
+
+        <p style="margin: 15px 0">
+          Add this in your <code>&lt;head&gt;</code> section:
+        </p>
+
+        <div class="code-box">
+          &lt;style&gt; body { display: flex; font-family: 'Comic Sans MS',
+          sans-serif; margin: 0; padding: 0; } &lt;/style&gt;
+        </div>
+
+        <div class="result-box">
+          <div class="result-label">✨ What this does:</div>
+          - <strong>display: flex</strong> = Makes items sit side by side<br />
+          - <strong>font-family</strong> = Changes the font to Comic Sans<br />
+          - <strong>margin: 0</strong> = Removes space around the edges
+        </div>
+      </div>
+
+      <!-- LESSON 5 -->
+      <div class="lesson">
+        <h2><span class="lesson-number">5</span> Styling the Sidebar 🖼️</h2>
+        <p>
+          <strong>Let's style that left sidebar to look like Phil's!</strong>
+        </p>
+
+        <div class="code-box">
+          .sidebar { background-color: #f0e6d2; width: 300px; padding: 30px;
+          border-right: 3px solid #333; } .sidebar img { width: 150px; height:
+          150px; border-radius: 50%; display: block; margin: 0 auto 20px; }
+          .sidebar h1 { font-size: 24px; margin-bottom: 5px; } .sidebar h2 {
+          font-size: 18px; font-weight: normal; margin-bottom: 20px; }
+        </div>
+
+        <div class="tip">
+          <strong>Cool CSS Tricks:</strong><br />
+          - <code>border-radius: 50%</code> = Makes image circular!<br />
+          - <code>padding: 30px</code> = Adds space inside the box<br />
+          - <code>background-color</code> = That cream/beige color
+        </div>
+      </div>
+
+      <!-- LESSON 6 -->
+      <div class="lesson">
+        <h2>
+          <span class="lesson-number">6</span> Styling the Main Content 📄
+        </h2>
+        <p>
+          <strong>Now for the right side with your projects and skills!</strong>
+        </p>
+
+        <div class="code-box">
+          .main-content { background-color: #f5f5dc; flex: 1; padding: 40px; }
+          .main-content h2 { font-size: 32px; margin-bottom: 20px;
+          text-decoration: underline; } .main-content ul { list-style-type:
+          disc; margin-left: 20px; font-size: 18px; line-height: 1.8; }
+        </div>
+
+        <div class="result-box">
+          <div class="result-label">📖 What's happening:</div>
+          - <strong>flex: 1</strong> = Takes up remaining space<br />
+          - <strong>list-style-type: disc</strong> = Bullet points<br />
+          - <strong>text-decoration: underline</strong> = Underlines headings
+        </div>
+      </div>
+
+      <!-- CHALLENGE -->
+      <div class="challenge">
+        <h3>🎯 Your Challenge!</h3>
+        <p><strong>Now it's your turn to build!</strong></p>
+        <ol style="margin-left: 20px; margin-top: 10px">
+          <li>Create a new file called <code>index.html</code></li>
+          <li>Copy the HTML structure from Lesson 1</li>
+          <li>Add your sidebar from Lesson 2</li>
+          <li>Add your lists from Lesson 3</li>
+          <li>
+            Add ALL the CSS styles from Lessons 4-6 inside
+            <code>&lt;style&gt;</code> tags
+          </li>
+          <li>Replace "Phil Choi" with YOUR name!</li>
+          <li>Add YOUR projects, skills, and experience!</li>
+        </ol>
+      </div>
+
+      <!-- BONUS TIPS -->
+      <div class="lesson">
+        <h2><span class="lesson-number">🌟</span> Bonus Tips!</h2>
+
+        <p><strong>Want to make links clickable?</strong></p>
+        <div class="code-box">
+          &lt;a href="mailto:your@email.com"&gt;your@email.com&lt;/a&gt; &lt;a
+          href="https://linkedin.com/in/yourname"&gt;LinkedIn Profile&lt;/a&gt;
+        </div>
+
+        <p style="margin-top: 20px"><strong>Want to change colors?</strong></p>
+        <div class="code-box">
+          background-color: #yourcolor; color: #textcolor;
+        </div>
+
+        <div class="tip">
+          Use a color picker tool online to find color codes! Try searching
+          "HTML color picker" on Google.
+        </div>
+      </div>
+
+      <div class="center" style="margin-top: 40px">
+        <button onclick="celebrate()">🎉 I Built My Portfolio!</button>
+      </div>
+    </div>
+
+    <script>
+      // Fun progress animation
+      window.addEventListener("scroll", () => {
+        const scrolled =
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+          100;
+        document.getElementById("progress").style.width = scrolled + "%";
+        document.getElementById("progress").textContent =
+          Math.round(scrolled) + "% Complete";
+      });
+
+      function celebrate() {
+        alert(
+          "🎊 AMAZING JOB! You're on your way to becoming a web developer! Keep learning and building cool stuff! 🚀"
+        );
+      }
+    </script>
+  </body>
+</html>
