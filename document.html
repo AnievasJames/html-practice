@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Land Selling Made Easy - Design Document</title>
+    <style>
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 1in;
+            background: white;
+        }
+        h1 {
+            text-align: center;
+            font-size: 16pt;
+            font-weight: bold;
+            margin-bottom: 0.2in;
+        }
+        h2 {
+            text-align: center;
+            font-size: 14pt;
+            font-weight: bold;
+            margin-bottom: 0.2in;
+        }
+        h3 {
+            text-align: center;
+            font-size: 12pt;
+            font-weight: bold;
+            margin-bottom: 0.3in;
+        }
+        h4 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 0.3in;
+            margin-bottom: 0.1in;
+        }
+        .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 0.4in;
+            margin-bottom: 0.2in;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.2in 0;
+            page-break-inside: avoid;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        .toc {
+            margin: 0.3in 0;
+        }
+        .member-info {
+            text-align: center;
+            margin-bottom: 0.3in;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Land Selling Made Easy</h1>
+<h2>Design Documents</h2>
+<h3>Version 1.0</h3>
+
+<div class="member-info">
+    <strong>Group Members:</strong><br>
+    Anievas, James Wilfred M.
+</div>
+
+<hr>
+
+<h4>Table of Contents</h4>
+<div class="toc">
+    I. Functional Requirements<br>
+    II. Use Case Diagrams<br>
+    III. Use Case Narratives
+</div>
+
+<hr>
+
+<div class="page-break"></div>
+
+<div class="section-title">I. FUNCTIONAL REQUIREMENTS</div>
+
+<table>
+    <tr>
+        <th style="width: 25%;">Name</th>
+        <th style="width: 60%;">Description</th>
+        <th style="width: 15%;">Version</th>
+    </tr>
+    <tr>
+        <td colspan="3" style="background-color: #e0e0e0;"><strong>Functional Requirements</strong></td>
+    </tr>
+    <tr>
+        <td>View Property Listings</td>
+        <td>This function allows users to browse all available land properties in a specific town. The system displays a catalog of properties with basic information including location, price, and property size. Users can scroll through the listings to find properties of interest.</td>
+        <td>Version 1.0</td>
+    </tr>
+    <tr>
+        <td>View Property Details</td>
+        <td>This function allows users to view detailed information about a specific property. When a user selects a property from the listings, the system displays comprehensive details including:
+            <ul>
+                <li>Property images</li>
+                <li>Full description</li>
+                <li>Price</li>
+                <li>Location/address</li>
+                <li>Land size/dimensions</li>
+                <li>Contact information of seller/owner</li>
+            </ul>
+        </td>
+        <td>Version 1.0</td>
+    </tr>
+    <tr>
+        <td>Compare Properties</td>
+        <td>This function allows users to compare two land properties side-by-side. Users can select two properties from the listings and view their details simultaneously to identify differences and similarities. The comparison includes:
+            <ul>
+                <li>Prices</li>
+                <li>Locations</li>
+                <li>Land sizes</li>
+                <li>Property features</li>
+                <li>Seller contact information</li>
+            </ul>
+        </td>
+        <td>Version 1.0</td>
+    </tr>
+    <tr>
+        <td>Search Properties</td>
+        <td>This function allows users to search for properties based on specific criteria such as:
+            <ul>
+                <li>Location</li>
+                <li>Price range</li>
+                <li>Land size</li>
+            </ul>
+            The system filters the property listings based on the search parameters entered by the user.
+        </td>
+        <td>Version 1.0</td>
+    </tr>
+    <tr>
+        <td>Contact Seller</td>
+        <td>This function allows users to view and access the contact information of property sellers/owners. The system displays:
+            <ul>
+                <li>Seller name</li>
+                <li>Phone number</li>
+                <li>Email address (if available)</li>
+            </ul>
+            Users can use this information to directly communicate with the seller regarding the property.
+        </td>
+        <td>Version 1.0</td>
+    </tr>
+</table>
+
+<div class="page-break"></div>
+
+<div class="section-title">II. USE CASE DIAGRAMS</div>
+
+<h4>Use Case Diagram for Land Selling Made Easy System Version 1.0</h4>
+
+<p><strong>Actor:</strong> User (Potential Buyer)</p>
+
+<p><strong>Use Cases:</strong></p>
+<ol>
+    <li>View Property Listings</li>
+    <li>View Property Details</li>
+    <li>Compare Properties</li>
+    <li>Search Properties</li>
+    <li>Contact Seller</li>
+</ol>
+
+<p><strong>Relationships:</strong></p>
+<ul>
+    <li>User can View Property Listings</li>
+    <li>User can View Property Details</li>
+    <li>User can Compare Properties (includes View Property Details)</li>
+    <li>User can Search Properties (includes View Property Listings)</li>
+    <li>User can Contact Seller (from View Property Details)</li>
+</ul>
+
+<p><em>Note: A visual diagram should be inserted here showing the User actor connected to all use cases within the system boundary.</em></p>
+
+<div class="page-break"></div>
+
+<div class="section-title">III. USE CASE NARRATIVES</div>
+
+<h4>Use Case 1: View Property Listings</h4>
+
+<table>
+    <tr>
+        <th style="width: 50%;">Actor Actions</th>
+        <th style="width: 50%;">System Responses</th>
+    </tr>
+    <tr>
+        <td>1. User accesses the website</td>
+        <td>2. System displays the home page with property listings</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>3. System loads all available properties from database</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>4. System displays properties in a grid/list format showing basic information (image, price, location)</td>
+    </tr>
+    <tr>
+        <td>5. User scrolls through the listings</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>6. User clicks on a property for more details</td>
+        <td>7. System redirects to Property Details page (see View Property Details use case)</td>
+    </tr>
+</table>
+
+<p><strong><em>Alternative Scenarios</em></strong></p>
+
+<table>
+    <tr>
+        <th style="width: 50%;">Actor Actions</th>
+        <th style="width: 50%;">System Responses</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td>3. System loads all available properties from database</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>4. No properties found in database</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>5. System displays message "No properties available at the moment"</td>
+    </tr>
+</table>
+
+<div class="page-break"></div>
+
+<h4>Use Case 2: View Property Details</h4>
+
+<table>
+    <tr>
+        <th style="width: 50%;">Actor Actions</th>
+        <th style="width: 50%;">System Responses</th>
+    </tr>
+    <tr>
+        <td>1. User clicks on a property from listings</td>
+        <td>2. System retrieves property details from database</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>3. System displays Property Details page showing:<br>
+        • Property images<br>
+        • Price<br>
+        • Description<br>
+        • Location<br>
+        • Land size<br>
+        • Seller contact information</td>
+    </tr>
+    <tr>
+        <td>4. User views property images</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5. User views property information</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>6. User clicks "Back to Listings" button</td>
+        <td>7. System returns to Property Listings page</td>
+    </tr>
+</table>
+
+<p><strong><em>Alternative Scenarios</em></strong></p>
+
+<table>
+    <tr>
+        <th style="width: 50%;">Actor Actions</th>
+        <th style="width: 50%;">System Responses</th>
+    </tr>
+    <tr>
+        <td>4. User clicks "Contact Seller" button</td>
+        <td>5. System highlights or displays seller contact information</td>
+    </tr>
+    <tr>
+        <td>6. User clicks "Compare" button</td>
+        <td>7. System adds property to comparison (see Compare Properties use case)</td>
+    </tr>
+</table>
+
+<div class="page-break"></div>
+
+<h4>Use Case 3: Compare Properties</h4>
+
+<table>
+    <tr>
+        <th style="width: 50%;">Actor Actions</th>
+        <th style="width: 50%;">System Responses</th>
+    </tr>
+    <tr>
+        <td>1. User views Property Details page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>2. User clicks "Add to Compare" button</td>
+        <td>3. System adds property to comparison list</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>4. System displays notification "Property added to comparison (1/2)"</td>
+    </tr>
+    <tr>
+        <td>5. User returns to Property Listings</td>
+        <td>6. System displays Property Listings with comparison indicator</td>
+    </tr>
+    <tr>
+        <td>7. User selects another property</td>
+        <td>8. System displays Property Details page</td>
+    </tr>
+    <tr>
+        <td>9. User clicks "Add to Compare" button</td>
+        <td>10. System adds second property to comparison</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>11. System displays notification "Property added to comparison (2/2)"</td>
+    </tr>
+    <tr>
+        <td>12. User clicks "Compare Now" button</td>
+        <td>13. System displays Comparison page with both properties side-by-side</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>14. System shows comparative information:<br>
+        • Property images<br>
+        • Prices<br>
+        • Locations<br>
+        • Land sizes<br>
+        • Descriptions<br>
+        • Seller contacts</td>
+    </tr>
+    <tr>
+        <td>15. User views comparison</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>16. User clicks "Clear Comparison" or selects a property</td>
+        <td>17. System removes properties from comparison or redirects to selected property</td>
+    </tr>
+</table>
+
+<p><strong><em>Alternative Scenarios</em></strong></p>
+
+<table>
+    <tr>
+        <th style="width: 50%;">Actor Actions</th>
+        <th style="width: 50%;">System Responses</th>
+    </tr>
+    <tr>
+        <td>9. User clicks "Add to Compare" button</td>
+        <td>10. System checks comparison list</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>11. Comparison list already has 2 properties</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>12. System displays message "Comparison full. Please remove a property first"</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>13. System displays option to remove properties from comparison</td>
+    </tr>
+</table>
+
+<div class="page-break"></div>
+
+<h4>Use Case 4: Search Properties</h4>
+
+<table>
+    <tr>
+        <th style="width: 50%;">Actor Actions</th>
+        <th style="width: 50%;">System Responses</th>
+    </tr>
+    <tr>
+        <td>1. User accesses the website</td>
+        <td>2. System displays home page with search bar</td>
+    </tr>
+    <tr>
+        <td>3. User enters search criteria (location, price range, or land size)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4. User clicks "Search" button</td>
+        <td>5. System processes search parameters</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>6. System queries database for matching properties</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>7. System displays filtered results matching search criteria</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>8. System shows number of results found</td>
+    </tr>
+    <tr>
+        <td>9. User views search results</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>10. User clicks on a property</td>
+        <td>11. System displays Property Details page (see View Property Details use case)</td>
+    </tr>
+</table>
+
+<p><strong><em>Alternative Scenarios</em></strong></p>
+
+<table>
+    <tr>
+        <th style="width: 50%;">Actor Actions</th>
+        <th style="width: 50%;">System Responses</th>
+    </tr>
+    <tr>
+        <td>4. User clicks "Search" button</td>
+        <td>5. System processes search parameters</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>6. System queries database for matching properties</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>7. No properties match the search criteria</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>8. System displays message "No properties found matching your search. Please try different criteria"</td>
+    </tr>
+    <tr>
+        <td>9. User clicks "Clear Search" or "View All"</td>
+        <td>10. System displays all properties (see View Property Listings use case)</td>
+    </tr>
+</table>
+
+<div class="page-break"></div>
+
+<h4>Use Case 5: Contact Seller</h4>
+
+<table>
+    <tr>
+        <th style="width: 50%;">Actor Actions</th>
+        <th style="width: 50%;">System Responses</th>
+    </tr>
+    <tr>
+        <td>1. User views Property Details page</td>
+        <td>2. System displays property information including seller contact section</td>
+    </tr>
+    <tr>
+        <td>3. User scrolls to "Contact Seller" section</td>
+        <td>4. System displays seller contact information:<br>
+        • Seller name<br>
+        • Phone number<br>
+        • Email address (if available)</td>
+    </tr>
+    <tr>
+        <td>5. User copies phone number or email</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>6. User uses their own device to contact seller via phone or email</td>
+        <td></td>
+    </tr>
+</table>
+
+<p><strong><em>Alternative Scenarios</em></strong></p>
+
+<table>
+    <tr>
+        <th style="width: 50%;">Actor Actions</th>
+        <th style="width: 50%;">System Responses</th>
+    </tr>
+    <tr>
+        <td>3. User scrolls to "Contact Seller" section</td>
+        <td>4. Contact information is not available</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>5. System displays message "Contact information unavailable for this property"</td>
+    </tr>
+</table>
+
+<hr>
+<p style="text-align: center;"><strong>End of Design Documents</strong></p>
+
+</body>
+</html>
