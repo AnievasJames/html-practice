@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-only {
+  margin: 35px auto auto auto;
+}
+
+.text-only p {
+  margin-top: 10px;
+}
+
+.logo img {
+  margin-left: -30px;
+}
+
+.navbar {
+  display: flex;
+  padding: 20px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+}
+
+nav ul {
+  display: inline-block;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #556b2f;
+}
+
+.col-2 h1 {
+  color: #556b2f;
+}
+
+p {
+  color: #4a5d29;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: -120px; /* Moves Both Text and Image Go Up */
+}
+
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.col-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+  margin-left: 70px;
+}
+
+.col-2 h1 {
+  font-size: 40px;
+  line-height: 52px;
+  margin: -50px 0 0 0;
+}
+
+.btn {
+  display: inline-block;
+  background: hsl(107, 65%, 42%);
+  color: #ffffff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transform: background 0.5;
+}
+
+.btn:hover {
+  background: #2b6d1b;
+}
+
+/* Featured Lands */
+
+.small-container {
+  max-width: 1200px;
+  margin: 150px auto 0;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.col-4 {
+  flex-basis: 25%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.5;
+}
+
+.col-4 img {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto 150px;
+  position: relative;
+  line-height: 60px;
+  color: #555;
+}
+
+.title::after {
+  content: "";
+  background: #8fa31e;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h4 {
+  color: #555;
+  font-weight: normal;
+}
+
+.col-4 p {
+  font-size: 14px;
+}
+
+.interest-level .fa {
+  color: #ff0000;
+}
+
+.col-4:hover {
+  transform: translateY(-5px);
+}
