@@ -1,0 +1,14 @@
+body {
+  border: 3px solid rgb(4, 173, 173);
+  display: flow-root;
+}
+
+#img1 {
+  float: left;
+  margin-right: 10px;
+}
+
+#img2 {
+  float: right;
+  margin-left: 10px;
+}

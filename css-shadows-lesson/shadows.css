@@ -1,0 +1,16 @@
+h1 {
+  /* Horizontal, Vertical, Blur and Color */
+  text-shadow: 
+
+  /* Lower Right Text Shadow: When the values are positive */ 
+    3px 3px 5px rgb(254, 72, 169),
+  /* Upper Left Text Shadow: When the values are negative */ 
+   -3px -3px 5px rgb(60, 198, 248);
+}
+
+.box1 {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(240, 233, 233);
+  box-shadow: 3px 3px 5px black;
+}

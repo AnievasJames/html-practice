@@ -1,0 +1,33 @@
+.visible {
+  border: 2px solid;
+  height: 40px;
+  overflow: visible;
+}
+
+.hidden {
+  border: 2px solid;
+  height: 40px;
+  overflow: hidden;
+}
+
+.clip {
+  /* same as hidden but you can control how much it would show */
+  border: 2px solid;
+  height: 40px;
+  overflow: clip;
+  overflow-clip-margin: 20px;
+}
+
+.scroll {
+  /* regardless of the volume of the element inside, it will have a scroll. */
+  border: 2px solid;
+  height: 40px;
+  overflow: scroll;
+}
+
+.auto {
+  /* it will only have a scroll if needed */
+  border: 2px solid;
+  height: 40px;
+  overflow: auto;
+}
