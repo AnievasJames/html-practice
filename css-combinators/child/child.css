@@ -1,0 +1,11 @@
+#container {
+  border: 2px solid;
+}
+
+#container > p {
+  background-color: yellow;
+}
+/* Paragraphs 1-3 are inside the container
+div but paragraph 3 is 1 level deeper.
+Paragraphs 1-2 are like the 2 children 
+while Paragraph 3 is a grand child. */

@@ -1,0 +1,8 @@
+display = property specifies if/how
+an element is displayed.
+
+block-level = start on a new line, take up the full width available
+(h1, div, p, form, header, footer)
+
+inline = do not start on a new line, width is limited to what is needed
+(span, a, img)

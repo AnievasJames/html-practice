@@ -1,0 +1,10 @@
+#box1 {
+  width: 200px;
+  height: 200px;
+  background-color: hsl(180, 84%, 62%);
+  position: relative;
+  top: 100px;
+  right: 100px;
+}
+/* In whatever way you move an element, it will be the opposite
+(Example: right: 100px;) instead of being moved to the right, it will move to the left*/

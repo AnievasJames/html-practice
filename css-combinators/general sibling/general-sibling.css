@@ -1,0 +1,7 @@
+#container {
+  border: 2px solid;
+}
+#container ~ p {
+  background-color: hsl(60, 97%, 55%);
+}
+/* All paragraphs inside a container will not be highlighted. */

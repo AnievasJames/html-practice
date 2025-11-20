@@ -1,17 +1,12 @@
-a:link {
-  color: hsl(287, 100%, 62%);
+a {
+  color: hsl(131, 100%, 50%);
+  text-decoration: none;
 }
-
 a:hover {
+  color: hsl(230, 61%, 62%);
   font-size: 1.1em;
-  color: rgb(255, 25, 33);
 }
-
 a:active {
+  color: hsl(0, 85%, 57%);
   font-size: 1.1em;
-  color: rgb(231, 52, 255);
-}
-
-a:visited {
-  color: hsl(287, 100%, 62%);
 }

@@ -1,0 +1,15 @@
+#box1 {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(255, 60, 164);
+  position: fixed;
+  margin: 180px;
+}
+#box2 {
+  width: 75px;
+  height: 75px;
+  background-color: hsl(120, 79%, 20%);
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}

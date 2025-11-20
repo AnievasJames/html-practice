@@ -1,0 +1,10 @@
+#container {
+  border: 2px solid;
+}
+
+#container + p {
+  background-color: hsl(60, 100%, 56%);
+}
+
+/* The closest paragraph immidiately after the container will be highlighted. 
+- It must be RIGHT NEXT to #container with no element in between.*/
